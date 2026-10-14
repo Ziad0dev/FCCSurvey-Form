@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Developer Survey</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1 id="title">Developer Survey</h1>
+    <p id="description">Help us understand how you learn to code. It takes about two minutes.</p>
+
+    <form id="survey-form" action="#" novalidate>
+      <fieldset>
+        <label id="name-label" for="name">Name
+          <input id="name" name="name" type="text" placeholder="Ada Lovelace" required>
+        </label>
+        <label id="email-label" for="email">Email
+          <input id="email" name="email" type="email" placeholder="ada@example.com" required>
+        </label>
+        <label id="number-label" for="number">Age <span class="hint">(optional)</span>
+          <input id="number" name="age" type="number" min="10" max="99" placeholder="25">
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <label for="dropdown">Which option best describes your current role?
+          <select id="dropdown" name="role" required>
+            <option value="" disabled selected>Select current role</option>
+            <option value="student">Student</option>
+            <option value="job">Full-time job</option>
+            <option value="learner">Full-time learner</option>
+            <option value="none">Prefer not to say</option>
+            <option value="other">Other</option>
+          </select>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Would you recommend learning to code to a friend?</legend>
+        <label><input type="radio" name="recommend" value="definitely" checked> Definitely</label>
+        <label><input type="radio" name="recommend" value="maybe"> Maybe</label>
+        <label><input type="radio" name="recommend" value="not-sure"> Not sure</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>What would you like to see improved? <span class="hint">(check all that apply)</span></legend>
+        <label><input type="checkbox" name="improve" value="frontend"> Front-end projects</label>
+        <label><input type="checkbox" name="improve" value="backend"> Back-end projects</label>
+        <label><input type="checkbox" name="improve" value="data"> Data visualization</label>
+        <label><input type="checkbox" name="improve" value="challenges"> Challenges</label>
+        <label><input type="checkbox" name="improve" value="community"> Open source community</label>
+      </fieldset>
+
+      <fieldset>
+        <label for="comments">Any comments or suggestions?
+          <textarea id="comments" name="comments" rows="4" placeholder="Enter your comment here..."></textarea>
+        </label>
+      </fieldset>
+
+      <button id="submit" type="submit">Submit</button>
+      <p id="result" role="status"></p>
+    </form>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
